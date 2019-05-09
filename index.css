@@ -11,31 +11,35 @@ html, body {
 }
 
 body {
-  background: url('images/bg-desktop.svg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url('images/bg-mobile.svg') no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
   background-color: hsl(257, 40%, 49%);
 }
 
 h1 {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.5em;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
-p {
+h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p.description {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.75rem;
-  font-size: 1.1em;
+  line-height: 1.8rem;
 }
 
 
 
 /* BEGIN Bootstrap overrides */
 .container {
-  max-width: 1280px;
+  max-width: 1320px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 /* END Bootstrap overrides */
 
@@ -54,7 +58,7 @@ p {
 
   min-width: 200px;
   font-size: 1.2em;
-  font-weight: bold;
+  /* font-weight: bold; */
   box-shadow: 4px 4px 18px -4px #222222;
 }
 
@@ -69,6 +73,8 @@ p {
 
 .title {
   margin-bottom: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6em;
 }
 
 .description {
@@ -77,7 +83,7 @@ p {
 
 .brand-logo {
   cursor: pointer;
-  height: 50px;
+  height: 32px;
   width: auto;
 }
 
@@ -98,7 +104,7 @@ p {
 }
 
 .footer-container {
-  height: 85px;
+  /* height: 85px; */
   float: right;
 }
 
@@ -123,12 +129,45 @@ i.fab {
   height: 42px;
 }
 
-/* BEGIN Responsiveness */
-@media (min-width: 375px) {
-
+.huddle-py-3 {
+  padding-top: 3rem!important;
 }
 
-@media (min-wiidth: 1440px) {
+.huddle-py-3 {
+  padding-bottom: 3rem!important;
+}
 
+
+
+
+
+/* BEGIN Responsiveness */
+@media (min-width: 992px) { 
+  body {
+    background: url('images/bg-desktop.svg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+  }
+
+  .brand-logo {
+    cursor: pointer;
+    height: 50px;
+    width: auto;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  p.description {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8rem;
+    font-size: 1.12em;
+  }
 }
 /* END Responsiveness */
